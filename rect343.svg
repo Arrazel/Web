@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="10.845211mm"
+   height="10.865369mm"
+   viewBox="0 0 10.845211 10.865369"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch348">
+      <stop
+         style="stop-color:#b3c571;stop-opacity:1;"
+         offset="0"
+         id="stop348" />
+    </linearGradient>
+    <linearGradient
+       id="swatch189">
+      <stop
+         style="stop-color:#d9d731;stop-opacity:1;"
+         offset="0"
+         id="stop189" />
+    </linearGradient>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-9.1062295,-6.1151879)">
+    <rect
+       style="fill:#ff8ef7;fill-opacity:0.83812;stroke:#000000;stroke-width:0.16745;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect343"
+       width="1.8730543"
+       height="3.0306656"
+       x="17.495363"
+       y="-9.1140642"
+       ry="0.65750188"
+       transform="rotate(45)" />
+    <path
+       style="fill:#797979;fill-opacity:0.749347;stroke:#000000;stroke-width:0.223097;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="path342"
+       d="m 9.0744902,17.046525 -2.4625787,0.22757 -1.6688827,-0.22757 1.0342079,-2.24644 1.0315228,-1.33151 1.4283708,2.018871 z"
+       transform="matrix(-0.53073295,-0.53073295,0.53073295,-0.53073295,5.779404,27.751256)" />
+    <rect
+       style="fill:#ba7916;fill-opacity:1;stroke:#000000;stroke-width:0.160752;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect342"
+       width="3.3085973"
+       height="9.9257917"
+       x="16.743137"
+       y="-6.7616072"
+       ry="0.85398769"
+       transform="rotate(45)" />
+    <text
+       xml:space="preserve"
+       style="font-size:1.42932px;font-family:Century;-inkscape-font-specification:'Century, Normal';writing-mode:lr-tb;direction:ltr;fill:#39f808;fill-opacity:0.749347;stroke:#000000;stroke-width:0.16745;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       x="2.2575991"
+       y="17.983585"
+       id="text348"
+       transform="rotate(-45)"><tspan
+         id="tspan348"
+         style="fill:#39f808;fill-opacity:0.749347;stroke:#000000;stroke-width:0.16745;stroke-dasharray:none;stroke-opacity:1"
+         x="2.2575991"
+         y="17.983585">Union</tspan><tspan
+         style="fill:#39f808;fill-opacity:0.749347;stroke:#000000;stroke-width:0.16745;stroke-dasharray:none;stroke-opacity:1"
+         x="2.2575991"
+         y="19.770235"
+         id="tspan349">Team</tspan></text>
+  </g>
+</svg>
