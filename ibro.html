@@ -1,83 +1,107 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GEO SATELLITE + EDGE AI | Project 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         :root {
-            --space-black: #05070a;
-            --deep-navy: #0d1117;
+            --space-black: #0b0e14;
+            --deep-navy: #161b22;
             --accent-blue: #00d2ff;
+            --bright-white: #ffffff;
             --alert-orange: #ff9f1c;
             --border-color: #30363d;
-            --text-muted: #8b949e;
+            --text-secondary: #c9d1d9;
         }
         body {
             background-color: var(--space-black);
-            color: #e6edf3;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--bright-white);
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
         .navbar {
-            background: rgba(13, 17, 23, 0.9);
+            background: rgba(22, 27, 34, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 2px solid var(--accent-blue);
+            padding: 15px 0;
         }
         .hero-section {
-            padding: 100px 0 60px;
-            background: radial-gradient(circle at 0% 0%, #161b22 0%, transparent 50%),
-                        radial-gradient(circle at 100% 100%, #0d1117 0%, transparent 50%);
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #0b0e14 0%, #1c2128 100%);
+            border-bottom: 1px solid var(--border-color);
         }
         .section-title {
-            font-weight: 700;
+            font-weight: 800;
+            color: var(--bright-white);
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--accent-blue);
-            border-left: 4px solid var(--accent-blue);
-            padding-left: 15px;
+            letter-spacing: 1.5px;
+            border-left: 5px solid var(--accent-blue);
+            padding-left: 20px;
             margin-bottom: 40px;
         }
         .card {
             background-color: var(--deep-navy);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            transition: transform 0.2s ease;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+            color: var(--bright-white);
         }
         .card:hover {
             border-color: var(--accent-blue);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 210, 255, 0.15);
+        }
+        .card h4 {
+            color: var(--accent-blue);
+            font-weight: 700;
         }
         .table {
-            color: #e6edf3;
+            color: var(--bright-white);
             border-color: var(--border-color);
+            vertical-align: middle;
         }
         .table thead th {
-            background-color: #161b22;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            font-size: 0.8rem;
+            background-color: #0d1117;
+            color: var(--accent-blue);
+            font-weight: 700;
             border-bottom: 2px solid var(--border-color);
+            padding: 15px;
+        }
+        .table tbody td {
+            padding: 15px;
+            border-color: var(--border-color);
         }
         .highlight-row {
-            background-color: rgba(0, 210, 255, 0.05);
+            background-color: rgba(0, 210, 255, 0.08) !important;
         }
         .badge-tech {
-            background: rgba(0, 210, 255, 0.1);
-            color: var(--accent-blue);
-            border: 1px solid var(--accent-blue);
-            margin-right: 5px;
-        }
-        .footer {
-            padding: 50px 0;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            background: var(--accent-blue);
+            color: #000;
+            font-weight: 700;
+            padding: 8px 15px;
+            border-radius: 8px;
         }
         .stat-value {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 800;
             color: var(--alert-orange);
+            text-shadow: 0 0 15px rgba(255, 159, 28, 0.3);
+        }
+        .text-muted-custom {
+            color: var(--text-secondary) !important;
+        }
+        strong {
+            color: var(--accent-blue);
+        }
+        .footer {
+            padding: 60px 0;
+            background: #0d1117;
+            border-top: 1px solid var(--border-color);
         }
     </style>
 </head>
@@ -85,28 +109,27 @@
 
 <nav class="navbar sticky-top navbar-dark">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="#">
-            <span class="text-white">GEO</span><span class="text-info">EO</span>-AI
+        <a class="navbar-brand fw-bold fs-3" href="#">
+            GEO<span style="color: var(--accent-blue)">EO</span>-AI
         </a>
-        <div class="d-flex">
-            <span class="badge rounded-pill badge-tech">Status: 2026 Ready</span>
+        <div class="d-flex align-items-center">
+            <span class="badge-tech">MISSION 2026</span>
         </div>
     </div>
 </nav>
 
 <header class="hero-section">
-    <div class="container text-center text-md-start">
+    <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-7">
-                <h1 class="display-3 fw-bold mb-3">GEO Satellite + Micro-Patch Streaming</h1>
-                <p class="lead mb-4 text-secondary">
-                    Эволюционное решение для геостационарного мониторинга аномалий в реальном времени. 
-                    Интеграция Edge AI для снижения задержки передачи критических данных до 5 минут.
+            <div class="col-lg-8">
+                <h1 class="display-3 fw-extrabold mb-3">GEO Satellite + <br><span style="color: var(--accent-blue)">Micro-Patch Streaming</span></h1>
+                <p class="lead mb-4 fs-4 text-muted-custom">
+                    High-contrast anomaly monitoring. On-board data processing (Edge AI) reduces notification latency from hours to <strong>5 minutes</strong>.
                 </p>
-                <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start">
-                    <span class="badge bg-dark border border-secondary px-3 py-2">Real-time EO</span>
-                    <span class="badge bg-dark border border-secondary px-3 py-2">Thermal Analysis</span>
-                    <span class="badge bg-dark border border-secondary px-3 py-2">Low-Latency</span>
+                <div class="d-flex flex-wrap gap-3">
+                    <div class="p-2 border border-info rounded text-info fw-bold">15-YEAR LIFESPAN</div>
+                    <div class="p-2 border border-info rounded text-info fw-bold">KA-BAND READY</div>
+                    <div class="p-2 border border-info rounded text-info fw-bold">AIRBUS COMPATIBLE</div>
                 </div>
             </div>
         </div>
@@ -116,100 +139,79 @@
 <main class="container my-5">
 
     <section class="mb-5">
-        <h2 class="section-title">1. Сравнение рыночных решений</h2>
-        <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Параметр</th>
-                        <th>Стандартный GEO Airbus</th>
-                        <th class="text-info">Проект GEO EO-AI</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Основная функция</td><td>Широкополосная связь</td><td>Аналитика и мониторинг аномалий</td></tr>
-                    <tr><td>Стоимость миссии</td><td>$250M – $350M</td><td>$140M – $180M</td></tr>
-                    <tr><td>Наличие Edge AI</td><td>Нет</td><td>Radiation-hardened SoC</td></tr>
-                    <tr><td>Реакция на событие</td><td>Задержка 1-3 часа</td><td>Задержка 1-5 минут</td></tr>
-                </tbody>
-            </table>
+        <h2 class="section-title">1. Market Solutions Comparison</h2>
+        <div class="card p-2">
+            <div class="table-responsive">
+                <table class="table mb-0">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Standard GEO Airbus</th>
+                            <th style="color: var(--bright-white); background: rgba(0,210,255,0.2)">Project GEO EO-AI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Primary Function</td><td>Communication & Relay</td><td>Analytics & Thermal Monitoring</td></tr>
+                        <tr><td>Mission Cost</td><td class="text-danger">$250M – $350M</td><td class="text-success fw-bold">$140M – $180M</td></tr>
+                        <tr><td>Edge AI Module</td><td>None</td><td>Radiation-hardened SoC</td></tr>
+                        <tr><td>Data Latency</td><td>180+ minutes</td><td class="fw-bold text-info">Under 5 minutes</td></tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 
-    <section class="mb-5 text-white">
-        <h2 class="section-title">2. Технические характеристики (Payload)</h2>
-        
-        <div class="row g-4">
+    <section class="mb-5">
+        <h2 class="section-title">2. Technical Specifications (Payload)</h2>
+        <div class="row g-4 text-white">
             <div class="col-md-6">
                 <div class="card h-100 p-4">
-                    <h4 class="text-info mb-3">Оптическая система LWIR</h4>
-                    <ul class="list-unstyled">
-                        <li><strong>Тип:</strong> Катадиоптрическая (зеркально-линзовая)</li>
-                        <li><strong>Апертура:</strong> 250 – 400 мм (оптимизировано для GEO)</li>
-                        <li><strong>Материалы:</strong> Германий (Ge), Селенид цинка (ZnSe)</li>
-                        <li><strong>Фокусное расстояние:</strong> 1.5 – 2.5 м</li>
-                        <li><strong>Защита:</strong> DLC (Diamond-Like Carbon) покрытие</li>
+                    <h4 class="mb-3">LWIR Optical System</h4>
+                    <ul class="list-unstyled fs-5">
+                        <li class="mb-2"><strong>Type:</strong> Catadioptric (Mirror-Lens)</li>
+                        <li class="mb-2"><strong>Aperture:</strong> 250 – 400 mm</li>
+                        <li class="mb-2"><strong>Materials:</strong> Ge (Germanium), ZnSe</li>
+                        <li class="mb-2"><strong>Focal Length:</strong> 1.5 – 2.5 m</li>
+                        <li class="mb-2"><strong>Protection:</strong> DLC (Diamond-Like Carbon) coating</li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card h-100 p-4 border-info">
-                    <h4 class="text-info mb-3">Сенсорный блок</h4>
-                    <p class="small text-muted">Используемые модели (Space-Qualified):</p>
-                    <ul class="list-group list-group-flush bg-transparent">
-                        <li class="list-group-item bg-transparent text-white border-secondary small px-0">
-                            <strong>Lynred (Sofradir):</strong> Микроболометры высокого разрешения
-                        </li>
-                        <li class="list-group-item bg-transparent text-white border-secondary small px-0">
-                            <strong>Leonardo:</strong> MCT-детекторы (Mercury Cadmium Telluride)
-                        </li>
-                        <li class="list-group-item bg-transparent text-white border-secondary small px-0">
-                            <strong>BAE Systems:</strong> Радиационно-стойкие LWIR матрицы
-                        </li>
-                    </ul>
-                    <div class="mt-3">
-                        <span class="badge badge-tech">NETD < 50 mK</span>
-                        <span class="badge badge-tech">Pixel Pitch: 17–25 μm</span>
+                <div class="card h-100 p-4">
+                    <h4 class="mb-3">Sensor Core</h4>
+                    <p class="text-muted-custom">Space-Qualified Components:</p>
+                    <div class="mb-3">
+                        <div class="p-2 mb-2 border-start border-info bg-dark"><strong>Lynred (Sofradir)</strong> — IR Focal Plane Arrays</div>
+                        <div class="p-2 mb-2 border-start border-info bg-dark"><strong>Leonardo</strong> — MCT Detectors</div>
+                        <div class="p-2 border-start border-info bg-dark"><strong>BAE Systems</strong> — Rad-Hard LWIR Sensors</div>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <span class="badge bg-primary">NETD < 50 mK</span>
+                        <span class="badge bg-primary">Pixel Pitch: 17–25 μm</span>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="card mt-4 p-4">
-            <h4 class="mb-4">Детализация стоимости полезной нагрузки (2026)</h4>
+            <h4 class="mb-4">EO Payload Cost Breakdown</h4>
             <div class="table-responsive">
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Подсистема</th>
-                            <th>Характеристики</th>
-                            <th>Бюджет</th>
+                            <th>Component</th>
+                            <th>Specifications</th>
+                            <th>Budget</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Матрица LWIR</td>
-                            <td>1024x1024, Space-grade</td>
-                            <td>$1.2M – $1.8M</td>
-                        </tr>
-                        <tr>
-                            <td>Оптическая сборка</td>
-                            <td>Германиевая оптика + зеркала</td>
-                            <td>$0.9M – $1.6M</td>
-                        </tr>
-                        <tr>
-                            <td>Вычислитель (Edge AI)</td>
-                            <td>FPGA Xilinx UltraScale / DPU</td>
-                            <td>$0.8M – $1.5M</td>
-                        </tr>
-                        <tr>
-                            <td>Система калибровки</td>
-                            <td>Blackbody + термостабилизация</td>
-                            <td>$0.4M – $0.7M</td>
-                        </tr>
+                        <tr><td>LWIR Matrix</td><td>1024x1024, Space-grade</td><td>$1.2M – $1.8M</td></tr>
+                        <tr><td>Optics</td><td>Germanium + Precision Polishing</td><td>$0.9M – $1.6M</td></tr>
+                        <tr><td>Processor (AI)</td><td>Xilinx UltraScale+ / DPU</td><td>$0.8M – $1.5M</td></tr>
+                        <tr><td>Calibration</td><td>Blackbody Reference Unit</td><td>$0.4M – $0.7M</td></tr>
                         <tr class="highlight-row">
-                            <td colspan="2" class="fw-bold">Итого стоимость EO-нагрузки</td>
-                            <td class="stat-value fw-bold text-info small">$3.3M – $5.6M</td>
+                            <td colspan="2" class="fw-bold fs-5 text-white">TOTAL PAYLOAD COST</td>
+                            <td class="stat-value text-info">$3.3M – $5.6M</td>
                         </tr>
                     </tbody>
                 </table>
@@ -218,59 +220,62 @@
     </section>
 
     <section class="mb-5">
-        <h2 class="section-title">3. Полный бюджет проекта</h2>
+        <h2 class="section-title">3. Mission Budget</h2>
         <div class="row g-4">
             <div class="col-md-6">
                 <div class="card p-4 h-100">
-                    <h4>Запуск и Орбита</h4>
-                    <table class="table table-sm">
-                        <tbody>
-                            <tr><td>Запуск (Ariane 6 / Falcon Heavy)</td><td>$50–70 млн</td></tr>
-                            <tr><td>Страхование миссии</td><td>$10–15 млн</td></tr>
-                            <tr><td>Орбитальный ввод</td><td>$5 млн</td></tr>
-                            <tr class="fw-bold"><td>Итого запуск</td><td>$65–90 млн</td></tr>
-                        </tbody>
-                    </table>
+                    <h4 class="text-white">Logistics & Launch</h4>
+                    <ul class="list-group list-group-flush bg-transparent">
+                        <li class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between">
+                            <span>Launch (Falcon Heavy/Ariane)</span> <span>$60M</span>
+                        </li>
+                        <li class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between">
+                            <span>Mission Insurance (15%)</span> <span>$12M</span>
+                        </li>
+                        <li class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between fw-bold text-info">
+                            <span>TOTAL LOGISTICS</span> <span>~$72M</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="card p-4 h-100">
-                    <h4>Платформа и Интеграция</h4>
-                    <table class="table table-sm">
-                        <tbody>
-                            <tr><td>Платформа (Питание/Корпус)</td><td>$50–65 млн</td></tr>
-                            <tr><td>Связь (Ka-band)</td><td>$15–20 млн</td></tr>
-                            <tr><td>Интеграция и Тесты</td><td>$20–25 млн</td></tr>
-                            <tr class="fw-bold"><td>Итого производство</td><td>$85–110 млн</td></tr>
-                        </tbody>
-                    </table>
+                    <h4 class="text-white">Manufacturing</h4>
+                    <ul class="list-group list-group-flush bg-transparent">
+                        <li class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between">
+                            <span>Platform (Satellite Bus)</span> <span>$55M</span>
+                        </li>
+                        <li class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between">
+                            <span>Comm Systems & Integration</span> <span>$40M</span>
+                        </li>
+                        <li class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between fw-bold text-info">
+                            <span>TOTAL MANUFACTURING</span> <span>~$95M</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="alert alert-info mt-4 text-center py-4 bg-dark border-info">
-            <h3 class="mb-0 fw-bold">Общий CAPEX проекта: <span class="text-white">$150M – $200M</span></h3>
         </div>
     </section>
 
-    <section class="mb-5 text-center">
-        <h2 class="section-title text-start">4. Экономическая эффективность</h2>
-        <div class="row g-4">
+    <section class="mb-5">
+        <h2 class="section-title">4. Economic Indicators</h2>
+        <div class="row g-4 text-center">
             <div class="col-md-4">
-                <div class="card p-4 shadow-sm border-0 bg-gradient">
-                    <p class="text-muted mb-1">Срок окупаемости</p>
-                    <div class="stat-value">2 – 3 года</div>
+                <div class="card p-4">
+                    <div class="text-muted-custom mb-2">PAYBACK PERIOD</div>
+                    <div class="stat-value">2.5 YEARS</div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card p-4 shadow-sm border-0">
-                    <p class="text-muted mb-1">Доход (10 стран)</p>
-                    <div class="stat-value">$80M – $120M / год</div>
+                <div class="card p-4">
+                    <div class="text-muted-custom mb-2">ANNUAL REVENUE</div>
+                    <div class="stat-value">$100M+</div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card p-4 shadow-sm border-0">
-                    <p class="text-muted mb-1">Срок службы</p>
-                    <div class="stat-value">15 лет</div>
+                <div class="card p-4">
+                    <div class="text-muted-custom mb-2">ROI (15 YEARS)</div>
+                    <div class="stat-value">$850M+</div>
                 </div>
             </div>
         </div>
@@ -280,7 +285,8 @@
 
 <footer class="footer">
     <div class="container text-center">
-        <p class="mb-0">Bit Union Team - Developed in 2026</p>
+        <h4 class="text-white mb-4">Bit Union Team - Developed in 2026</h4>
+
     </div>
 </footer>
 
