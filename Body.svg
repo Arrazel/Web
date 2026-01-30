@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="10.851719mm"
+   height="7.65906mm"
+   viewBox="0 0 10.851719 7.65906"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-9.3542545,-7.0247206)">
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke-width:3.55247;paint-order:stroke fill markers"
+       id="Body"
+       width="2.3510418"
+       height="3.6895909"
+       x="16.986736"
+       y="0.67632866"
+       ry="0.53718299"
+       transform="rotate(30)" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke-width:1.5921;paint-order:stroke fill markers"
+       id="Anten"
+       width="1.1011859"
+       height="1.4761713"
+       x="17.55422"
+       y="-0.9110747"
+       ry="0.45358786"
+       transform="rotate(30)"
+       rx="0.41020706" />
+    <g
+       id="Antenright">
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke-width:5.66653;paint-order:stroke fill markers"
+         id="rect9"
+         width="1.5347654"
+         height="0.86908376"
+         x="19.163153"
+         y="1.3405521"
+         ry="0.34208629"
+         transform="rotate(30)" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke-width:6.63199;paint-order:stroke fill markers"
+         id="rect10"
+         width="3.6141582"
+         height="1.7529749"
+         x="20.398838"
+         y="0.85938758"
+         rx="0.41020706"
+         ry="0.45358786"
+         transform="rotate(30)" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:3.29197;paint-order:stroke fill markers"
+         id="rect11"
+         width="0.6391753"
+         height="0.6391753"
+         x="21.029396"
+         y="0.9491902"
+         rx="0.069337495"
+         ry="0.0747566"
+         transform="rotate(30)" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:3.29197;paint-order:stroke fill markers"
+         id="rect11-1"
+         width="0.6391753"
+         height="0.6391753"
+         x="21.971634"
+         y="0.99664158"
+         rx="0.069337495"
+         ry="0.0747566"
+         transform="rotate(30)" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:3.29197;paint-order:stroke fill markers"
+         id="rect11-9"
+         width="0.6391753"
+         height="0.6391753"
+         x="22.860416"
+         y="0.98207748"
+         rx="0.069337495"
+         ry="0.0747566"
+         transform="rotate(30)" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:3.29197;paint-order:stroke fill markers"
+         id="rect11-2"
+         width="0.6391753"
+         height="0.6391753"
+         x="20.972342"
+         y="1.8097674"
+         rx="0.069337495"
+         ry="0.0747566"
+         transform="rotate(30)" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:3.29197;paint-order:stroke fill markers"
+         id="rect11-13"
+         width="0.6391753"
+         height="0.6391753"
+         x="21.905254"
+         y="1.7927279"
+         rx="0.069337495"
+         ry="0.0747566"
+         transform="rotate(30)" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:3.29197;paint-order:stroke fill markers"
+         id="rect11-7"
+         width="0.6391753"
+         height="0.6391753"
+         x="22.828602"
+         y="1.7807637"
+         rx="0.069337495"
+         ry="0.0747566"
+         transform="rotate(30)" />
+    </g>
+    <g
+       id="Antenleft">
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke-width:5.65991;paint-order:stroke fill markers"
+         id="rect9-2"
+         width="1.5329716"
+         height="0.86806804"
+         x="15.628097"
+         y="1.4285778"
+         ry="0.34168649"
+         transform="rotate(30)" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke-width:6.63199;paint-order:stroke fill markers"
+         id="rect10-9"
+         width="3.6141582"
+         height="1.7529749"
+         x="12.156505"
+         y="0.91459435"
+         rx="0.41020706"
+         ry="0.45358786"
+         transform="rotate(30)" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:3.29197;paint-order:stroke fill markers"
+         id="rect11-8"
+         width="0.6391753"
+         height="0.6391753"
+         x="12.787063"
+         y="1.0043969"
+         rx="0.069337495"
+         ry="0.0747566"
+         transform="rotate(30)" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:3.29197;paint-order:stroke fill markers"
+         id="rect11-1-6"
+         width="0.6391753"
+         height="0.6391753"
+         x="13.7293"
+         y="1.0518483"
+         rx="0.069337495"
+         ry="0.0747566"
+         transform="rotate(30)" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:3.29197;paint-order:stroke fill markers"
+         id="rect11-9-5"
+         width="0.6391753"
+         height="0.6391753"
+         x="14.618083"
+         y="1.0372843"
+         rx="0.069337495"
+         ry="0.0747566"
+         transform="rotate(30)" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:3.29197;paint-order:stroke fill markers"
+         id="rect11-2-0"
+         width="0.6391753"
+         height="0.6391753"
+         x="12.730008"
+         y="1.8649741"
+         rx="0.069337495"
+         ry="0.0747566"
+         transform="rotate(30)" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:3.29197;paint-order:stroke fill markers"
+         id="rect11-13-2"
+         width="0.6391753"
+         height="0.6391753"
+         x="13.662921"
+         y="1.8479347"
+         rx="0.069337495"
+         ry="0.0747566"
+         transform="rotate(30)" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:3.29197;paint-order:stroke fill markers"
+         id="rect11-7-8"
+         width="0.6391753"
+         height="0.6391753"
+         x="14.586268"
+         y="1.8359705"
+         rx="0.069337495"
+         ry="0.0747566"
+         transform="rotate(30)" />
+    </g>
+    <g
+       id="Antendown">
+      <path
+         style="fill:#000000;fill-opacity:1;stroke-width:5.96209;paint-order:stroke fill markers"
+         id="path13"
+         d="m -16.808196,-5.6784921 a 1.3619641,1.3619641 0 0 1 -0.680982,1.1794956 1.3619641,1.3619641 0 0 1 -1.361964,-1e-7 1.3619641,1.3619641 0 0 1 -0.680982,-1.1794955 h 1.361964 z"
+         transform="rotate(-150)" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke-width:4.03686;paint-order:stroke fill markers"
+         id="rect13"
+         width="0.4284831"
+         height="0.48437223"
+         x="12.563737"
+         y="13.777993"
+         ry="0.21424155" />
+    </g>
+  </g>
+</svg>
