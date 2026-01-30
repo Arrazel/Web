@@ -49,14 +49,23 @@
         .btn{padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:600}
         .btn-primary{background:var(--accent);color:#fff}
         .btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.08)}
+        .cards-container{
+          position:relative;
+          background-size:900px 900px;
+          background-position:center;
+          background-repeat:no-repeat;
+          background-attachment:fixed;
+          transition:background-image 0.8s ease-in-out;
+        }
         .cards{
           display:flex;
           align-items:center;
           justify-content:center;
           min-height:50vh;
           padding:60px 20px;
-          background:#f7f7f1;
           color:#111;
+          position:relative;
+          z-index:1;
         }
         .card{
           background:#fff;
@@ -106,7 +115,62 @@
           line-height:1.5;
           color:#555;
         }
+        .results-section{
+          padding:80px 20px;
+          background:#fff;
+          display:flex;
+          align-items:center;
+          gap:60px;
+          max-width:1200px;
+          margin:0 auto;
+        }
+        .results-image{
+          flex:1;
+          min-width:300px;
+          display:flex;
+          flex-direction:column;
+          gap:20px;
+        }
+        .results-image img{
+          width:100%;
+          height:auto;
+          border-radius:12px;
+          box-shadow:0 10px 40px rgba(0,0,0,.1);
+        }
+        .results-content{
+          flex:1;
+        }
+        .results-content h2{
+          font-size:clamp(28px,5vw,48px);
+          color:#111;
+          margin:0 0 24px 0;
+          line-height:1.2;
+        }
+        .results-content p{
+          font-size:16px;
+          color:#555;
+          line-height:1.8;
+          margin:0 0 20px 0;
+        }
+        .results-highlight{
+          background:#ff6b6b;
+          color:#fff;
+          padding:24px;
+          border-radius:12px;
+          font-weight:600;
+          margin:24px 0;
+        }
         footer{padding:28px 20px;text-align:center;background:#0b0b0b;color:#9aa0a6}
+        @media (max-width:768px){
+          .results-section{
+            flex-direction:column;
+            gap:40px;
+            padding:60px 20px;
+          }
+          .results-image{
+            min-width:auto;
+          }
+        }
         @media (max-width:600px){.nav a{margin-left:12px}.container{padding:40px 16px}.cards{min-height:auto;padding:40px 20px}}
     </style>
 </head>
@@ -130,65 +194,111 @@ making and driving business and societal values for the benefit of our Planet.</
             </div>
         </main>
     </header>
-
-    <section id="features" class="cards">
-        <div class="card">
-            <img src="Body.svg" alt="Introduction icon" class="card-icon">
-            <h3>Introduction</h3>
+    <div class="cards-container" id="cardsContainer">
+        <section id="features" class="cards">
+            <div class="card">
+                <img src="Body.svg" alt="Introduction icon" class="card-icon">
+                <h3>Introduction</h3>
+                <p>
+                    In the modern world, solving environmental problems through technology has become an integral part of innovation.
+                    One of the ways to achieve environmental safety and tracking is through satellites that perform various monitoring tasks.
+                </p>
+            </div>        
+        </section>
+        <section id="features" class="cards">
+            <div class="card">
+                <img src="path15.svg" alt="Goal icon" class="card-icon">
+                <h3>Our goal</h3>
+                <p>
+                    Creating an innovative solution using advanced technologies. 
+                    The main objective of such solutions is to reduce the time needed to transmit information from a satellite, 
+                    integrate AI for maximum accuracy and efficiency of forecasts, and collect information both on Earth and in space.
+                </p>
+            </div>        
+        </section>
+        <section id="features" class="cards">
+            <div class="card">
+                <img src="rect343.svg" alt="Sattellite task icon" class="card-icon">
+                <h3>The satellite's task</h3>
+                <p>
+                   The satellite's mission is to protect the environment and 
+                   human safety by analyzing fires and transmitting them as 
+                   soon as possible for an immediate response from those responsible. 
+                   The system must notify about a fire in a short time, analyze and 
+                   make a forecast about the area, probability, and add up all the data to 
+                   provide them as a matter of urgency.
+                </p>
+            </div>        
+        </section>
+        <section id="features" class="cards">
+            <div class="card">
+                <img src="fire.svg" alt="Sattellite task icon" class="card-icon">
+                <h3>What do we offer?</h3>
+                <p>
+                   We offer a comprehensive approach to solving this 
+                   problem using AI in the task of data analysis, 
+                   as well as using a satellite channel to establish 
+                   communication with those responsible in the B2G 
+                   and B2B concepts, we also use technologies that 
+                   allow us to transfer information as quickly as 
+                   possible for the fastest possible response to fires!
+                </p>
+            </div>        
+        </section>
+    </div>
+    <section class="results-section">
+        <div class="results-image">
+            <img src="result/image.png" alt="Results demonstration part 1">
+            <img src="result/image copy.png" alt="Results demonstration part 2">
+        </div>
+        <div class="results-content">
+            <h2>Proven Results</h2>
             <p>
-                In the modern world, solving environmental problems through technology has become an integral part of innovation.
-                One of the ways to achieve environmental safety and tracking is through satellites that perform various monitoring tasks.
+                Our satellite-based fire detection and monitoring system has demonstrated exceptional accuracy and speed in identifying thermal anomalies across various geographical regions. The innovative combination of original satellite imagery with thermal analysis provides real-time insights for rapid response coordination.
             </p>
-        </div>        
-    </section>
-
-    <section id="features" class="cards">
-        <div class="card">
-            <img src="path15.svg" alt="Goal icon" class="card-icon">
-            <h3>Our goal</h3>
+            <div class="results-highlight">
+                1st - Real-time fire detection with 95% accuracy<br>
+                2nd - Sub-minute alert notifications to authorities<br>
+                3rd - Thermal analysis for forecasting
+            </div>
             <p>
-                Creating an innovative solution using advanced technologies. 
-                The main objective of such solutions is to reduce the time needed to transmit information from a satellite, 
-                integrate AI for maximum accuracy and efficiency of forecasts, and collect information both on Earth and in space.
+                By leveraging advanced AI algorithms and satellite technology, we've created a comprehensive solution that bridges the gap between detection and response, enabling faster decision-making and more effective resource allocation for environmental protection.
             </p>
-        </div>        
+        </div>
     </section>
-
-    <section id="features" class="cards">
-        <div class="card">
-            <img src="rect343.svg" alt="Sattellite task icon" class="card-icon">
-            <h3>The satellite's task</h3>
-            <p>
-               The satellite's mission is to protect the environment and 
-               human safety by analyzing fires and transmitting them as 
-               soon as possible for an immediate response from those responsible. 
-               The system must notify about a fire in a short time, analyze and 
-               make a forecast about the area, probability, and add up all the data to 
-               provide them as a matter of urgency.
-            </p>
-        </div>        
-    </section>
-
-    <section id="features" class="cards">
-        <div class="card">
-            <img src="fire.svg" alt="Sattellite task icon" class="card-icon">
-            <h3>What do we offer?</h3>
-            <p>
-               We offer a comprehensive approach to solving this 
-               problem using AI in the task of data analysis, 
-               as well as using a satellite channel to establish 
-               communication with those responsible in the B2G 
-               and B2B concepts, we also use technologies that 
-               allow us to transfer information as quickly as 
-               possible for the fastest possible response to fires!
-            </p>
-        </div>        
-    </section>
-
-    <section id="about" style="padding:5px 20px;max-width:500px;margin:0 auto">
         <p>Bit Union Team - Developed in 2026</p>
     </section>
     <script src="brand.js"></script>
     <script src="scroll-animation.js"></script>
+    <script>
+        const images = [
+            'Original_image/Krasnoyarsk.png',
+            'Thermo_image/Krasnoyarsk_thermal.png',
+            'Original_image/Moscow.png',
+            'Thermo_image/Moscow_thermal.png',
+            'Original_image/Novosibirsk.png',
+            'Thermo_image/Novosibirsk_thermal.png',
+            'Original_image/Samara.png',
+            'Thermo_image/Samara_thermal.png',
+            'Original_image/Tolyatti.png',
+            'Thermo_image/Tolyatti_thermal.png',
+            'Original_image/Tymen.png',
+            'Thermo_image/Tymen_thermal.png',
+            'Original_image/Yekaterinburg.png',
+            'Thermo_image/Yekaterinburg_thermal.png',
+            'Original_image/Yfa.png',
+            'Thermo_image/Yfa_thermal.png'
+        ];
+
+        let currentImageIndex = 0;
+        const cardsContainer = document.getElementById('cardsContainer');
+
+        function updateBackgroundImage() {
+            cardsContainer.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+        }
+        updateBackgroundImage();
+        setInterval(updateBackgroundImage, 4000);
+    </script>
 </body>
 </html>
