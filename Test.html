@@ -49,10 +49,55 @@
         .btn{padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:600}
         .btn-primary{background:var(--accent);color:#fff}
         .btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.08)}
-        .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;padding:20px 20px;background:#f7f7f1;color:#111}
-        .card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(16,24,40,.06)}
+        .cards{
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          min-height:50vh;
+          padding:60px 20px;
+          background:#f7f7f1;
+          color:#111;
+        }
+        .card{
+          background:#fff;
+          border-radius:12px;
+          padding:16px;
+          box-shadow:0 6px 18px rgba(16,24,40,.06);
+          width:100%;
+          max-width:320px;
+          opacity:0;
+          transform:translateX(-100px);
+        }
+        @keyframes slideInCard{
+          from{
+            opacity:0;
+            transform:translateX(-100px);
+          }
+          to{
+            opacity:1;
+            transform:translateX(0);
+          }
+        }
+        .card img{
+          width:80px;
+          height:80px;
+          object-fit:contain;
+          margin-bottom:12px;
+          border-radius:8px;
+        }
+        .card h3{
+          margin:8px 0 6px 0;
+          font-size:16px;
+          color:#1a1a1a;
+        }
+        .card p{
+          margin:0;
+          font-size:13px;
+          line-height:1.5;
+          color:#555;
+        }
         footer{padding:28px 20px;text-align:center;background:#0b0b0b;color:#9aa0a6}
-        @media (max-width:600px){.nav a{margin-left:12px}.container{padding:40px 16px}}
+        @media (max-width:600px){.nav a{margin-left:12px}.container{padding:40px 16px}.cards{min-height:auto;padding:40px 20px}}
     </style>
 </head>
 <body>
@@ -134,5 +179,6 @@ making and driving business and societal values for the benefit of our Planet.</
         <p>Bit Union Team - Developed in 2026</p>
     </section>
     <script src="brand.js"></script>
+    <script src="scroll-animation.js"></script>
 </body>
 </html>
