@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bit Union Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root{--accent:#ff6b6b}
+        *{box-sizing:border-box}
+        html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;color:#fff}
+        body{background:#111}
+        .hero{
+            min-height:100vh;
+            background-image:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url('4148020.jpg');
+            background-size:cover;
+            background-position:center;
+            display:flex;
+            flex-direction:column;
+        }
+        .brand {
+            font-weight: 1000;
+            font-size: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            font-family: 'Times New Roman', serif;
+            color: #e3f703;
+        }
+        .word {
+            display: inline-block;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.5s ease;
+            margin-right: 50px;
+        }
+
+        .word.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .nav{display:flex;justify-content:space-between;align-items:center;padding:20px 32px}
+        .nav a{color:rgba(255,255,255,.95);text-decoration:none;margin-left:18px;font-weight:600}
+        .container{max-width:1100px;margin:0 auto;padding:80px 20px;display:flex;flex-direction:column;gap:24px}
+        .hero h1{font-size:clamp(28px,6vw,56px);margin:0;line-height:1.05}
+        .hero p{max-width:65ch;color:rgba(255,255,255,.9)}
+        .buttons{display:flex;gap:12px}
+        .btn{padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:600}
+        .btn-primary{background:var(--accent);color:#fff}
+        .btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.08)}
+        .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;padding:60px 20px;background:#f7f7f1;color:#111}
+        .card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(16,24,40,.06)}
+        footer{padding:28px 20px;text-align:center;background:#0b0b0b;color:#9aa0a6}
+        @media (max-width:600px){.nav a{margin-left:12px}.container{padding:40px 16px}}
+    </style>
+</head>
+<body>
+    <header class="hero" role="banner">
+        <nav class="nav container">
+            <div class="brand"></div>
+            <div class="menu">
+                <a href="#features">About project</a>
+                <a href="#about">About us</a>
+                <a href="#contact">Our contacts</a>
+            </div>
+        </nav>
+        <main class="container">
+            <h1>CHALLENGE 3 FROM AIRBUS</h1>
+            <p>Short description:<br></br> Your challenge is to develop new digital solutions leveraging Airbus satellite imagery, improving decision
+making and driving business and societal values for the benefit of our Planet.</p>
+            <div class="buttons">
+                <a class="btn btn-primary" href="#about">Узнать больше</a>
+                <a class="btn btn-ghost" href="#contact">Связаться</a>
+            </div>
+        </main>
+    </header>
+
+    <section id="features" class="cards">
+        <div class="card"><h3>Адаптивность</h3><p>Корректно отображается на мобильных и десктопных устройствах.</p></div>
+        <div class="card"><h3>Простота</h3><p>Чистая структура и минимум зависимостей.</p></div>
+        <div class="card"><h3>Кастомизация</h3><p>Легко изменить цвета, шрифты и содержание.</p></div>
+    </section>
+
+    <section id="about" style="padding:60px 20px;max-width:1100px;margin:0 auto">
+        <h2>О проекте</h2>
+        <p>Этот шаблон служит стартовой точкой для быстрого создания лендингов и простых сайтов.</p>
+    </section>
+
+    <footer id="contact">
+        <p>© 2026 Мой сайт — <a href="mailto:info@example.com" style="color:inherit;text-decoration:underline">info@example.com</a></p>
+    </footer>
+    <script src="brand.js"></script>
+</body>
+</html>
