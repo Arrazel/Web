@@ -266,6 +266,98 @@
             grid-template-columns:1fr;
           }
         }
+        .gallery-section{
+          padding:80px 20px;
+          background:linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+          display:flex;
+          flex-direction:column;
+          align-items:center;
+          gap:40px;
+        }
+        .gallery-section h2{
+          font-size:clamp(28px,5vw,48px);
+          color:#111;
+          margin:0;
+          text-align:center;
+        }
+        .gallery-container{
+          position:relative;
+          width:100%;
+          max-width:900px;
+          aspect-ratio:16/9;
+          background:#fff;
+          border-radius:16px;
+          overflow:hidden;
+          box-shadow:0 20px 60px rgba(0,0,0,.15);
+        }
+        .gallery-image{
+          position:absolute;
+          width:100%;
+          height:100%;
+          object-fit:contain;
+          opacity:0;
+          transition:opacity 0.6s ease-in-out;
+        }
+        .gallery-image.active{
+          opacity:1;
+        }
+        .gallery-controls{
+          display:flex;
+          gap:16px;
+          justify-content:center;
+          align-items:center;
+        }
+        .gallery-btn{
+          background:#ff6b6b;
+          color:#fff;
+          border:none;
+          padding:12px 20px;
+          border-radius:8px;
+          cursor:pointer;
+          font-weight:600;
+          transition:background 0.3s ease;
+          font-size:16px;
+        }
+        .gallery-btn:hover{
+          background:#e55555;
+        }
+        .gallery-btn:disabled{
+          background:#ccc;
+          cursor:not-allowed;
+        }
+        .gallery-counter{
+          color:#555;
+          font-weight:600;
+          min-width:80px;
+          text-align:center;
+        }
+        .gallery-dots{
+          display:flex;
+          gap:8px;
+          justify-content:center;
+          margin-top:20px;
+        }
+        .dot{
+          width:12px;
+          height:12px;
+          border-radius:50%;
+          background:rgba(0,0,0,.2);
+          cursor:pointer;
+          transition:background 0.3s ease;
+        }
+        .dot.active{
+          background:#ff6b6b;
+        }
+        @media (max-width:768px){
+          .gallery-section{
+            padding:60px 20px;
+            gap:30px;
+          }
+          .gallery-btn{
+            padding:10px 16px;
+            font-size:14px;
+          }
+        }
     </style>
 </head>
 <body>
@@ -387,13 +479,96 @@ making and driving business and societal values for the benefit of our Planet.</
             </div>
         </div>
     </section>
+    <section class="gallery-section" id="gallery">
+        <h2>Project Gallery</h2>
+        <div class="gallery-container">
+            <img src="1.png" alt="Gallery image 1" class="gallery-image active">
+            <img src="2.png" alt="Gallery image 2" class="gallery-image">
+            <img src="3.png" alt="Gallery image 3" class="gallery-image">
+            <img src="4.png" alt="Gallery image 4" class="gallery-image">
+            <img src="5.png" alt="Gallery image 5" class="gallery-image">
+        </div>
+        <div class="gallery-controls">
+            <button class="gallery-btn" id="prevBtn">← Previous</button>
+            <span class="gallery-counter"><span id="currentImage">1</span> / 5</span>
+            <button class="gallery-btn" id="nextBtn">Next →</button>
+        </div>
+        <div class="gallery-dots" id="dotsContainer">
+            <span class="dot active" onclick="goToImage(0)"></span>
+            <span class="dot" onclick="goToImage(1)"></span>
+            <span class="dot" onclick="goToImage(2)"></span>
+            <span class="dot" onclick="goToImage(3)"></span>
+            <span class="dot" onclick="goToImage(4)"></span>
+        </div>
+    </section>
     <footer id="contact" style="background:#0b0b0b;padding:40px 20px;color:#9aa0a6;text-align:center;">
-      <div class="container">
-        <p style="margin:0">Bit Union Team - Developed in 2026</p>
-      </div>
+        <div class="container">
+            <p style="margin:0">Bit Union Team - Developed in 2026</p>
+        </div>
     </footer>
     <script src="brand.js"></script>
     <script src="scroll-animation.js"></script>
+    <script>
+        // Галерея с листанием изображений
+        let currentImageIndex = 0;
+        const totalImages = 5;
+        const images = document.querySelectorAll('.gallery-image');
+        const dots = document.querySelectorAll('.dot');
+        const currentImageSpan = document.getElementById('currentImage');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function showImage(index) {
+            // Скрываем все изображения
+            images.forEach((img, i) => {
+                img.classList.remove('active');
+                dots[i].classList.remove('active');
+            });
+            
+            // Показываем текущее изображение
+            images[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentImageSpan.textContent = index + 1;
+            currentImageIndex = index;
+        }
+
+        function goToImage(index) {
+            showImage(index);
+        }
+
+        function nextImage() {
+            let nextIndex = (currentImageIndex + 1) % totalImages;
+            showImage(nextIndex);
+        }
+
+        function prevImage() {
+            let prevIndex = (currentImageIndex - 1 + totalImages) % totalImages;
+            showImage(prevIndex);
+        }
+
+        // Обработчики событий
+        nextBtn.addEventListener('click', nextImage);
+        prevBtn.addEventListener('click', prevImage);
+
+        // Автоматическое листание каждые 5 секунд
+        let autoPlayInterval = setInterval(nextImage, 5000);
+
+        // Останавливаем автоматическое листание при клике
+        function resetAutoPlay() {
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = setInterval(nextImage, 5000);
+        }
+
+        nextBtn.addEventListener('click', resetAutoPlay);
+        prevBtn.addEventListener('click', resetAutoPlay);
+        dots.forEach(dot => dot.addEventListener('click', resetAutoPlay));
+
+        // Поддержка клавиатуры (стрелки влево/вправо)
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+        });
+    </script>
     <script>
         const images = [
             'Original_image/Krasnoyarsk.png',
