@@ -511,7 +511,7 @@ making and driving business and societal values for the benefit of our Planet.</
     <script src="scroll-animation.js"></script>
     <script>
         // Галерея с листанием изображений
-        let currentImageIndex = 0;
+        let galleryImageIndex = 0;
         const totalImages = 5;
         const images = document.querySelectorAll('.gallery-image');
         const dots = document.querySelectorAll('.dot');
@@ -530,7 +530,7 @@ making and driving business and societal values for the benefit of our Planet.</
             images[index].classList.add('active');
             dots[index].classList.add('active');
             currentImageSpan.textContent = index + 1;
-            currentImageIndex = index;
+            galleryImageIndex = index;
         }
 
         function goToImage(index) {
@@ -538,12 +538,12 @@ making and driving business and societal values for the benefit of our Planet.</
         }
 
         function nextImage() {
-            let nextIndex = (currentImageIndex + 1) % totalImages;
+            let nextIndex = (galleryImageIndex + 1) % totalImages;
             showImage(nextIndex);
         }
 
         function prevImage() {
-            let prevIndex = (currentImageIndex - 1 + totalImages) % totalImages;
+            let prevIndex = (galleryImageIndex - 1 + totalImages) % totalImages;
             showImage(prevIndex);
         }
 
@@ -571,7 +571,7 @@ making and driving business and societal values for the benefit of our Planet.</
         });
     </script>
     <script>
-        const images = [
+        const backgroundImages = [
             'Original_image/Krasnoyarsk.png',
             'Thermo_image/Krasnoyarsk_thermal.png',
             'Original_image/Moscow.png',
@@ -590,12 +590,12 @@ making and driving business and societal values for the benefit of our Planet.</
             'Thermo_image/Yfa_thermal.png'
         ];
 
-        let currentImageIndex = 0;
+        let backgroundImageIndex = 0;
         const cardsContainer = document.getElementById('cardsContainer');
 
         function updateBackgroundImage() {
-            cardsContainer.style.backgroundImage = `url('${images[currentImageIndex]}')`;
-            currentImageIndex = (currentImageIndex + 1) % images.length;
+            cardsContainer.style.backgroundImage = `url('${backgroundImages[backgroundImageIndex]}')`;
+            backgroundImageIndex = (backgroundImageIndex + 1) % backgroundImages.length;
         }
         updateBackgroundImage();
         setInterval(updateBackgroundImage, 4000);
