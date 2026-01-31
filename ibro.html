@@ -192,73 +192,84 @@
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="card mt-4 p-4">
-            <h4 class="mb-4">EO Payload Cost Breakdown</h4>
-            <div class="table-responsive">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Component</th>
-                            <th>Specifications</th>
-                            <th>Budget</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>LWIR Matrix</td><td>1024x1024, Space-grade</td><td>$1.2M – $1.8M</td></tr>
-                        <tr><td>Optics</td><td>Germanium + Precision Polishing</td><td>$0.9M – $1.6M</td></tr>
-                        <tr><td>Processor (AI)</td><td>Xilinx UltraScale+ / DPU</td><td>$0.8M – $1.5M</td></tr>
-                        <tr><td>Calibration</td><td>Blackbody Reference Unit</td><td>$0.4M – $0.7M</td></tr>
-                        <tr class="highlight-row">
-                            <td colspan="2" class="fw-bold fs-5 text-white">TOTAL PAYLOAD COST</td>
-                            <td class="stat-value text-info">$3.3M – $5.6M</td>
-                        </tr>
-                    </tbody>
-                </table>
+    <section class="mb-5">
+        <h2 class="section-title">3. Mass Configuration & Launch Specs</h2>
+        <div class="card p-4">
+            <div class="row">
+                <div class="col-lg-7">
+                    <h4 class="mb-4">Component Weight Breakdown</h4>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Sub-System</th>
+                                    <th>Estimated Mass (kg)</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Satellite Bus (Structure)</td><td>1,200 kg</td><td>Aluminum-Lithium Frame</td></tr>
+                                <tr><td>Propulsion & Fuel (BOL)</td><td>1,800 kg</td><td>Xenon + Chemical for GEO injection</td></tr>
+                                <tr><td>Optical Payload (Telescope)</td><td>180 kg</td><td>Mirror assembly + Casing</td></tr>
+                                <tr><td>Edge AI & Electronics</td><td>45 kg</td><td>Radiation shielding included</td></tr>
+                                <tr><td>Solar Arrays & Batteries</td><td>220 kg</td><td>4.5 kW power generation</td></tr>
+                                <tr><td>Thermal Control (Cryocoolers)</td><td>110 kg</td><td>Active cooling for IR sensors</td></tr>
+                                <tr class="highlight-row">
+                                    <td class="fw-bold fs-5">TOTAL WET MASS</td>
+                                    <td class="stat-value text-info">3,555 kg</td>
+                                    <td class="fw-bold">Ready for Falcon Heavy</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="p-4 bg-dark rounded border border-secondary mt-4">
+                        <h5>Launch Compatibility</h5>
+                        <p class="small text-muted-custom">Based on the calculated 3.5-ton mass, the satellite is optimized for:</p>
+                        <ul class="small">
+                            <li><strong>SpaceX Falcon Heavy:</strong> Direct injection to GEO.</li>
+                            <li><strong>Ariane 6:</strong> Dual-launch configuration.</li>
+                            <li><strong>Payload Margin:</strong> 15% safety buffer included.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="mb-5">
-        <h2 class="section-title">3. Mission Budget</h2>
+        <h2 class="section-title">4. Territory Coverage Strategy</h2>
         <div class="row g-4">
             <div class="col-md-6">
                 <div class="card p-4 h-100">
-                    <h4 class="text-white">Logistics & Launch</h4>
-                    <ul class="list-group list-group-flush bg-transparent">
-                        <li class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between">
-                            <span>Launch (Falcon Heavy/Ariane)</span> <span>$60M</span>
-                        </li>
-                        <li class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between">
-                            <span>Mission Insurance (15%)</span> <span>$12M</span>
-                        </li>
-                        <li class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between fw-bold text-info">
-                            <span>TOTAL LOGISTICS</span> <span>~$72M</span>
-                        </li>
-                    </ul>
+                    <h4>Instantaneous FOV</h4>
+                    <p class="text-muted-custom">Static coverage without moving parts:</p>
+                    <div class="display-6 fw-bold text-info mb-2">600 x 600 KM</div>
+                    <p>Ideal for 24/7 fixed monitoring of high-risk industrial zones or specific national borders.</p>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="card p-4 h-100">
-                    <h4 class="text-white">Manufacturing</h4>
-                    <ul class="list-group list-group-flush bg-transparent">
-                        <li class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between">
-                            <span>Platform (Satellite Bus)</span> <span>$55M</span>
-                        </li>
-                        <li class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between">
-                            <span>Comm Systems & Integration</span> <span>$40M</span>
-                        </li>
-                        <li class="list-group-item bg-transparent text-white border-secondary d-flex justify-content-between fw-bold text-info">
-                            <span>TOTAL MANUFACTURING</span> <span>~$95M</span>
-                        </li>
-                    </ul>
+                    <h4>Scanning Total Coverage</h4>
+                    <p class="text-muted-custom">Using Step-and-Stare scanning mirrors:</p>
+                    <div class="display-6 fw-bold text-info mb-2">5,000 KM Across</div>
+                    <p>Total operational reach covering <strong>Europe, CIS, and Central Asia</strong> from a single orbital slot (e.g., 31°E).</p>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card p-4 border-info">
+                    <h5>Pixel Intelligence (GSD)</h5>
+                    <p>At 35,786 km altitude, the spatial resolution is <strong>800m - 1km per pixel</strong>. While coarse for imaging, our <strong>Edge AI</strong> detects sub-pixel thermal signatures, identifying fire fronts as small as 50 meters by analyzing energy flux variance.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="mb-5">
-        <h2 class="section-title">4. Economic Indicators</h2>
+        <h2 class="section-title">5. Economic Indicators</h2>
         <div class="row g-4 text-center">
             <div class="col-md-4">
                 <div class="card p-4">
@@ -286,7 +297,6 @@
 <footer class="footer">
     <div class="container text-center">
         <h4 class="text-white mb-4">Bit Union Team - Developed in 2026</h4>
-
     </div>
 </footer>
 
